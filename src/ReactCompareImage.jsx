@@ -80,6 +80,10 @@ function ReactCompareImage(props) {
   const rightImageRef = useRef();
   const leftImageRef = useRef();
 
+  useEffect(()=>{
+    setSliderPosition(sliderPositionPercentage);
+  },[sliderPositionPercentage])
+
   // keep track container's width in local state
   // to make the component responsive.
   useEffect(() => {
